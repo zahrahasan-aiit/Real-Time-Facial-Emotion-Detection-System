@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Emotion Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Real-Time Emotion Detection</h1>
+            <p>Let AI Model detect your emotions in real-time!</p>
+        </header>
+
+        <div class="main-content">
+            <div class="video-section">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+                
+                <div class="controls">
+                    <button id="startBtn" class="btn btn-primary">Start Camera</button>
+                    <button id="stopBtn" class="btn btn-danger" disabled>Stop Camera</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="emotion-display">
+                    <div class="emoji" id="emoji">😊</div>
+                    <h2 id="emotion">Waiting...</h2>
+                    <p id="confidence"></p>
+                </div>
+
+                <div class="status" id="status">
+                    <span class="status-indicator"></span>
+                    <span id="statusText">Ready to start</span>
+                </div>
+
+                <div class="probability-bars" id="probabilityBars">
+                    <!-- Probability bars will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built with ❤️ using TensorFlow and Flask by Praveer.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
